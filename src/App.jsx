@@ -17,7 +17,7 @@ const App = () => {
 	const [allMarkdown, setallMarkdown] = useState(`
 # ✨${repoName}✨
 
-<img src="main.svg" width="100%" style="display: block; margin: 0 auto" />
+<img src="banner.svg" alt="save the above banner image in the same folder as this README with the name of banner.svg" width="100%" style="display: block; margin: 0 auto" />
 
 <br />
 
@@ -27,7 +27,7 @@ const App = () => {
 
 ##  📸 Screenshots
 
-![](screenshot.png)
+<img src="screenshot.png" alt="save a screenshot in the same folder as this README with the name of screenshot.png" width="100%" style="display: block; margin: 0 auto" />
 
 <br />
 

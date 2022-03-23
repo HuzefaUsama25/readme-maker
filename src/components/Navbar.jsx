@@ -1,8 +1,6 @@
 const Navbar = () => {
 	return (
-		<nav>
-			<ul className="burger-menu ">BM</ul>
-
+		<nav className="beauty-box">
 			<ul className="main-nav beauty-box">
 				<li>ReadmeMaker</li>
 				<li>

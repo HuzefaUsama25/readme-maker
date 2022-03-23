@@ -1,12 +1,16 @@
 import { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import SVGComponent from './SVGComponent';
+import { marked } from 'marked';
 
 const Result = (props) => {
 	const [currentTab, setcurrentTab] = useState('preview');
 
+	const [html, sethtml] = useState(marked.parse(props.allMarkdown));
+
 	return (
 		<>
+			<>{() => html()}</>
 			<div className="result-menu beauty-box">
 				<div
 					className="result-preview-button button beauty-box"
@@ -31,10 +35,10 @@ const Result = (props) => {
 							fontColor={props.bannerJson.fontColor}
 							catchphrase={props.bannerJson.catchphrase}
 						/>
-						<ReactMarkdown children={props.allMarkdown} />
+						<div dangerouslySetInnerHTML={{ __html: html }} />
 					</>
 				) : (
-					props.allMarkdown
+					html
 				)}
 			</div>
 		</>
